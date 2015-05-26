@@ -1,0 +1,5 @@
+#!/bin/bash
+
+/usr/bin/test -x /media/pendrive/gps.log || /usr/bin/touch /media/pendrive/gps.log
+/bin/ps -e | grep "gstring.1.py" || sudo /usr/local/bin/gstring.1.py 
+echo "gstring already running"

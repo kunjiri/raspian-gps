@@ -1,0 +1,4 @@
+#!/bin/bash
+
+/bin/ps -e | grep "r-mirror" || /usr/local/bin/r-mirror
+echo "mirror running"

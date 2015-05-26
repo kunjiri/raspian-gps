@@ -1,0 +1,4 @@
+#!/bin/bash
+
+/usr/local/bin/sakis3g console status | grep -q "connected to" || sudo /usr/local/bin/relConnect 
+echo "already connected"

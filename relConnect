@@ -1,0 +1,4 @@
+#!/bin/bash
+
+sakis3g connect console --noprobe USBMODEM="19d2:0117" APN="smartnet" OTHER="USBMODEM" MODEM="OTHER" APN_USER=123 APN_PASS=345
+/sbin/iptables-restore </usr/local/bin/iptables.save
