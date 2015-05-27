@@ -1,0 +1,29 @@
+<html>
+<head>
+<script language=javascript type="text/javascript">
+function displayData() {
+var xhr = new XMLHttpRequest();
+xhr.open('get', 'json.php', true);
+
+xhr.onreadystatechange = function () {
+ var DONE = 4;
+ var OK = 200;
+ if (xhr.readyState == DONE) {
+	if (xhr.status == OK) {
+	 //alert(xhr.responseText);
+	document.getElementById("data_area").innerHTML=xhr.responseText;
+		} else {
+		alert ('Error' + xhr.status);
+	       		}
+	}
+   };
+xhr.send(null);
+setTimeout("displayData()", 2000);
+}
+</script>
+</head>
+<body onload="displayData()">
+<div id="data_area">Data will be here</div>
+
+</body>
+</html>
